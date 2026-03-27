@@ -37,4 +37,3 @@ def menu():
             case _:
                 print("Error, intentalo de nuevo")
 
-menu()
