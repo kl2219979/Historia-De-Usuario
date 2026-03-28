@@ -25,10 +25,8 @@ def search_product():
             print(f"\n{i+1} - name: {product['name']} | price: {product['price']} | quantyti: {product['quantyti']}")
             flag = True
             break
-        else:
-            flag = False
     if flag == False:
-        print(f"\nEl producto no se encontro {flag}")       
+        print(f"\nEl producto no se encontro")       
         
 def update_product():
     update = input("desea modificar completa o parcialmente el producto (c/p):").lower()
