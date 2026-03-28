@@ -1,4 +1,5 @@
 from services.functions import add_product,show_product,search_product,update_product,remove_product,calculate_statistics_inventory
+from files.file import save_file, upload_file
 
 def menu():
     while True:
@@ -28,9 +29,9 @@ def menu():
             case 6:
                 calculate_statistics_inventory()
             case 7:
-                pass
+                save_file()
             case 8:
-                pass
+                upload_file()
             case 9:
                 print("Saliendo del Programa ....")
                 break

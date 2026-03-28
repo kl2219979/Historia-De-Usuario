@@ -10,19 +10,25 @@ def add_product():
     print(f"Producto ingresado correctamente - name: {product['name']} | price: {product['price']} | quantyti: {product['quantyti']}")
 
 def show_product():
-    if len(inventory)<0:
-        print("El inventario esta vacio")
+    if not inventory:
+        print("\nEl inventario esta vacio")
         return
     for i,product in enumerate(inventory):
         print(f"{i+1} - name: {product['name']} | price: {product['price']} | quantyti: {product['quantyti']}")
         
+
 def search_product():
     name = input("Ingrese el nombre del producto que desea buscar:")
-    
+    flag = False 
     for i,product in enumerate(inventory):
         if product['name'] == name:
             print(f"\n{i+1} - name: {product['name']} | price: {product['price']} | quantyti: {product['quantyti']}")
+            flag = True
             break
+        else:
+            flag = False
+    if flag == False:
+        print(f"\nEl producto no se encontro {flag}")       
         
 def update_product():
     update = input("desea modificar completa o parcialmente el producto (c/p):").lower()
